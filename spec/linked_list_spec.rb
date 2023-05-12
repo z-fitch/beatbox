@@ -7,7 +7,7 @@ RSpec.describe LinkedList do
         list = LinkedList.new
         
         expect(list).to be_instance_of(LinkedList)
-        
+        expect(list.head).to eq(nil)
         
     end
 
