@@ -20,7 +20,10 @@ RSpec.describe LinkedList do
     
     describe '#append' do
         it "exists" do
-            expect(@list.append("doop")).to eq("doop")
+            require 'pry'; binding.pry
+            @list.append("doop")
+
+            expect(@list.head.data).to eq("doop")
             expect(@list.head.next_node).to eq(nil) 
         end
     end
