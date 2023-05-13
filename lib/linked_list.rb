@@ -20,9 +20,9 @@ def append(data)
     end
 end
 
-# def count
+def count
 
-# end
+end
 
 # def to_string
 
