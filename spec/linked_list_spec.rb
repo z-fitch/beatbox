@@ -35,5 +35,19 @@ RSpec.describe LinkedList do
 
         end
     end
+    
+    describe '#to_string' do
+        it "concat data to string" do
+            @list.append("doop") 
+
+
+            expect(@list.to_string).to eq("doop")
+
+
+        end
+    end
+
+
+
 
 end

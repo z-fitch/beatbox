@@ -32,10 +32,18 @@ def count
         count
     end
 end
-# def to_string
 
-# end
+#IS AN INFINITE LOOP CTL Z TO STOP
 
+def to_string
+    current_node = @head
+    bb = []
+        until current_node == nil
+            bb << current_node.data
+            current_node = current_node.next_node
+        end
+    bb.join(" ")
+end
 
 end
 
