@@ -13,7 +13,7 @@ def append(data)
         @head = Node.new(data)
     else
         current_node = @head
-        while current_node.next_node != nil
+        until current_node.next_node == nil
             current_node = current_node.next_node
             current_node.next_node = Node.new(data)
         end
@@ -21,9 +21,17 @@ def append(data)
 end
 
 def count
-
+    count = 0
+    if @head == nil
+        count = 0
+    else
+        count = 1
+        until @head.next_node == nil
+        count += 1
+        end
+        count
+    end
 end
-
 # def to_string
 
 # end

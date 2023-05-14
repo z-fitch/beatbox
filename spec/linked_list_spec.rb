@@ -24,16 +24,15 @@ RSpec.describe LinkedList do
 
             expect(@list.head.data).to eq("doop")
             expect(@list.head.next_node).to eq(nil) 
-            require 'pry'; binding.pry
         end
     end
 
     describe '#count' do
-        xit "counts all data" do
-        @list.append("doop")
+        it "counts all data" do
+            @list.append("doop") 
 
-            expect().to eq()
-            expect().to eq() 
+            expect(@list.count).to eq(1)
+
         end
     end
 
