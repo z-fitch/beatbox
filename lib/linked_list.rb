@@ -13,27 +13,38 @@ def append(data)
         @head = Node.new(data)
     else
         current_node = @head
-        until current_node.next_node == nil
+        new_node = Node.new(data)
+        while current_node.next_node != nil
             current_node = current_node.next_node
-            current_node.next_node = Node.new(data)
         end
+        current_node.next_node = new_node
     end
 end
 
 def count
-    count = 0
-    if @head == nil
-        count = 0
-    else
-        count = 1
-        until @head.next_node == nil
-        count += 1
-        end
-        count
+    counter = 0
+    current_node = @head
+    until current_node == nil
+    current_node = current_node.next_node
+    counter += 1
     end
+    counter
+    
+    
+    
+    
+    # if @head == nil
+    #     counter = 0
+    # else
+    #     counter = 1
+    #     until @head.next_node == nil
+    #     counter += 1
+    #     end
+    #     counter
+    # end
 end
 
-#IS AN INFINITE LOOP CTL Z TO STOP
+
 
 def to_string
     current_node = @head

@@ -45,6 +45,16 @@ RSpec.describe LinkedList do
 
 
         end
+        it "concat multiple data to string" do
+            @list.append("doop") 
+            expect(@list.to_string).to eq("doop")
+
+            @list.append("deep") 
+
+            expect(@list.count).to eq(2)
+            expect(@list.to_string).to eq("doop deep")
+require 'pry'; binding.pry
+        end
     end
 
 
