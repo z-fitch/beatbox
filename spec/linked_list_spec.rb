@@ -53,11 +53,31 @@ RSpec.describe LinkedList do
 
             expect(@list.count).to eq(2)
             expect(@list.to_string).to eq("doop deep")
-require 'pry'; binding.pry
+
         end
     end
 
+    describe '#prepend' do
+        it "adds data to the front" do
+            @list.append("plop")
+            @list.to_string
+            @list.append("suu")
+            @list.prepend("dop")
+            @list.to_string
 
+            expect(@list.to_string).to eq("dop plop suu")
+            expect(@list.count).to eq(3)
+
+require 'pry'; binding.pry
+
+        end
+    end
+
+    describe '#insert' do
+        xit "inserts data anywhere" do
+            
+        end
+    end
 
 
 end
