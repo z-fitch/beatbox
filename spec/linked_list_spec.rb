@@ -67,15 +67,21 @@ RSpec.describe LinkedList do
 
             expect(@list.to_string).to eq("dop plop suu")
             expect(@list.count).to eq(3)
-
-require 'pry'; binding.pry
-
         end
     end
 
     describe '#insert' do
-        xit "inserts data anywhere" do
-            
+        it "inserts data anywhere" do
+            @list.append("plop")
+            @list.to_string
+            @list.append("suu")
+            @list.prepend("dop")
+            @list.to_string
+            @list.insert(1, "woo")
+
+
+            expect(@list.to_string).to eq("dop woo plop suu")
+            expect(@list.count).to eq(4)
         end
     end
 
