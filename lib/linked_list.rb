@@ -29,19 +29,6 @@ def count
     counter += 1
     end
     counter
-    
-    
-    
-    
-    # if @head == nil
-    #     counter = 0
-    # else
-    #     counter = 1
-    #     until @head.next_node == nil
-    #     counter += 1
-    #     end
-    #     counter
-    # end
 end
 
 
@@ -55,6 +42,19 @@ def to_string
         end
     bb.join(" ")
 end
+
+def prepend(data)
+    current_node = Node.new(data)
+    current_node.next_node = @head
+    @head = current_node
+end
+
+
+
+def insert
+
+end
+
 
 end
 
