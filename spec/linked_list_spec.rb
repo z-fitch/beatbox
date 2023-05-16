@@ -109,12 +109,24 @@ RSpec.describe LinkedList do
 
             expect(@list.to_string).to eq("deep woo shi shu blop")
             expect(@list.includes?("deep")).to eq(true)
-            expect(@list.includes?("data")).to eq(false)
+            expect(@list.includes?("dep")).to eq(false)
         end
     end
 
     describe '#pop' do
         it "removes last node" do
+            @list.append("deep")
+            @list.append("woo")
+            @list.append("shi")
+            @list.append("shu")
+            @list.append("blop")
+            
+            expect(@list.to_string).to eq("deep woo shi shu blop")
+            @list.pop
+            expect(@list.to_string).to eq("deep woo shi shu")
+            @list.pop
+            expect(@list.to_string).to eq("deep woo shi")
+            require 'pry'; binding.pry
         end
     end
 end
