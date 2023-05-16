@@ -27,9 +27,6 @@ def prepend(data)
     @head = current_node
 end
 
-
-# 
-
 def count
     counter = 0
     current_node = @head
@@ -39,7 +36,6 @@ def count
     end
     counter
 end
-
 
 def to_string
     current_node = @head
@@ -67,15 +63,23 @@ def find(position, amount)
 end
 
 def includes?(data)
-    string= to_string
+    string = to_string
     full_string = string.include?(data)
 end
 
 def pop 
-
+    if @head == nil
+        nil
+    else
+        current_node = @head
+        until current_node.next_node.next_node == nil
+            current_node = current_node.next_node
+        end
+        last_node = current_node.next_node
+        current_node.next_node = nil
+    end
+    last_node
 end
-
-
 
 end
 
