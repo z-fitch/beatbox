@@ -126,7 +126,7 @@ RSpec.describe LinkedList do
             expect(@list.to_string).to eq("deep woo shi shu")
             @list.pop
             expect(@list.to_string).to eq("deep woo shi")
-            require 'pry'; binding.pry
+            
         end
     end
 end
