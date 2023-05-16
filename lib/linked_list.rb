@@ -66,13 +66,15 @@ def find(position, amount)
     full_string = string.split[position, amount].join(" ")
 end
 
+def includes?(data)
+    string= to_string
+    full_string = string.include?(data)
+end
+
 def pop 
 
 end
 
-def includes?(data)
-
-end
 
 
 end
