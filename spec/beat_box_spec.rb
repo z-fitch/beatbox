@@ -30,7 +30,7 @@ RSpec.describe BeatBox do
     describe '#count' do
         it "counts the nodes" do
             @bb.append("deep doo ditt")
-            @bb.append("deep doo ditt")
+            @bb.append("woo hoo shu")
 
             expect(@bb.count).to eq(6)
         end
