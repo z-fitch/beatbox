@@ -12,11 +12,27 @@ RSpec.describe BeatBox do
 
     describe '#initialize' do
         it "exists" do
-            
             expect(@bb).to be_instance_of(BeatBox)
             expect(@bb.list.head).to eq(nil)
+            
         end
     end
+    
+    describe '#append' do
+        it "appends more than one node" do
+            @bb.append("deep doo ditt")
+         
 
+            expect(@bb.list.head.data).to eq("deep")
+            expect(@bb.list.head.next_node.data).to eq("doo")
+        end
+    end
+    describe '#count' do
+        it "counts the nodes" do
+            @bb.append("deep doo ditt")
+            @bb.append("deep doo ditt")
 
+            expect(@bb.count).to eq(6)
+        end
+    end
 end
