@@ -61,6 +61,20 @@ def insert(position, data)
     current_node.next_node = new_node 
 end
 
+def find(position, amount)
+    string = to_string
+    full_string = string.split[position, amount].join(" ")
+end
+
+def pop 
+
+end
+
+def includes?(data)
+
+end
+
+
 end
 
 
