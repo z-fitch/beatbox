@@ -22,7 +22,6 @@ def play
     beats = @list.to_string
     puts `say -r 100 -v boing "#{beats}"`
     beats
-
 end
 
 end

@@ -27,14 +27,13 @@ RSpec.describe BeatBox do
             expect(@bb.list.head.next_node.data).to eq("doo")
         end
     end
-    
+  
     describe '#count' do
         it "counts the nodes" do
             @bb.append("deep doo ditt")
             @bb.append("woo hoo shu")
 
             expect(@bb.count).to eq(6)
-
         end
     end
 
@@ -45,7 +44,14 @@ RSpec.describe BeatBox do
 
             expect(@bb.list.count).to eq(6)
             expect(@bb.play).to eq("deep doo ditt woo hoo shu")
-            
+        end
+    end
+    describe '#count' do
+        it "counts the nodes" do
+            @bb.append("deep doo ditt")
+            @bb.append("deep doo ditt")
+
+            expect(@bb.count).to eq(6)
         end
     end
 end
