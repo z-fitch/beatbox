@@ -101,7 +101,15 @@ RSpec.describe LinkedList do
 
     describe '#includes?' do
         it "includes certain elements" do
-    
+            @list.append("deep")
+            @list.append("woo")
+            @list.append("shi")
+            @list.append("shu")
+            @list.append("blop")
+
+            expect(@list.to_string).to eq("deep woo shi shu blop")
+            expect(@list.includes?("deep")).to eq(true)
+            expect(@list.includes?("data")).to eq(false)
         end
     end
 
